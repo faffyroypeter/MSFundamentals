@@ -36,6 +36,7 @@
             this.txtIncome = new System.Windows.Forms.TextBox();
             this.lblFinalTax = new System.Windows.Forms.Label();
             this.lblTaxResult = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTaxNo
@@ -60,17 +61,17 @@
             this.lblTaxSlab.AutoSize = true;
             this.lblTaxSlab.Location = new System.Drawing.Point(27, 87);
             this.lblTaxSlab.Name = "lblTaxSlab";
-            this.lblTaxSlab.Size = new System.Drawing.Size(63, 20);
+            this.lblTaxSlab.Size = new System.Drawing.Size(89, 20);
             this.lblTaxSlab.TabIndex = 3;
-            this.lblTaxSlab.Text = "Tax Slab";
+            this.lblTaxSlab.Text = "Tax Slab (%)";
             // 
             // cmbTaxSlab
             // 
             this.cmbTaxSlab.FormattingEnabled = true;
             this.cmbTaxSlab.Items.AddRange(new object[] {
-            "10%",
-            "20%",
-            "30%"});
+            "10",
+            "20",
+            "30"});
             this.cmbTaxSlab.Location = new System.Drawing.Point(275, 87);
             this.cmbTaxSlab.Name = "cmbTaxSlab";
             this.cmbTaxSlab.Size = new System.Drawing.Size(220, 28);
@@ -112,11 +113,22 @@
             this.lblTaxResult.TabIndex = 8;
             this.lblTaxResult.Text = "Final Tax";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(518, 157);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 29);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Calculate Tax";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmTaxCollector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 301);
+            this.ClientSize = new System.Drawing.Size(848, 301);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblTaxResult);
             this.Controls.Add(this.lblFinalTax);
             this.Controls.Add(this.txtIncome);
@@ -142,5 +154,6 @@
         private TextBox txtIncome;
         private Label lblFinalTax;
         private Label lblTaxResult;
+        private Button button1;
     }
 }
